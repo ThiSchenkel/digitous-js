@@ -23,7 +23,7 @@ var basicUp = "This is Cool";
 var basicDown = "This is Cool";
 console.log(basic, basicUp.toUpperCase(), basicDown.toLowerCase());
 
-// // 07- [ 'b', 'a', 'n', 'a', 'n', 'a' ]
+// 07- [ 'b', 'a', 'n', 'a', 'n', 'a' ]
 var word = "banana";
 var letters = word.split;
 console.log(word.split(""));
@@ -33,6 +33,11 @@ console.log(word.split(""));
 var age = 49;
 var template = "I'm 49 years old";
 console.log(template);
+
+// 09- bonus spécial Ewa : 
+var changed = "Bonjour";
+var regex = /o/gi;
+console.log(changed.replace(regex, "a"));
 
 
 
