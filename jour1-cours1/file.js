@@ -34,7 +34,7 @@ var age = 49;
 var template = "I'm 49 years old";
 console.log(template);
 
-// 09- bonus spécial Ewa : 
+// 09- bonus spécial Ewa : Banjaur
 var changed = "Bonjour";
 var regex = /o/gi;
 console.log(changed.replace(regex, "a"));
