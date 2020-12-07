@@ -1,1 +1,1 @@
-# dijitous-js
+# digitous-js
