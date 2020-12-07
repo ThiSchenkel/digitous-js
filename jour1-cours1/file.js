@@ -25,19 +25,21 @@ console.log(basic, basicUp.toUpperCase(), basicDown.toLowerCase());
 
 // 07- [ 'b', 'a', 'n', 'a', 'n', 'a' ]
 var word = "banana";
-var letters = word.split;
-console.log(word.split(""));
+var letters = word.split("");
+console.log(letters);
 
 
 // 08- I'm 49 years old
 var age = 49;
-var template = "I'm 49 years old";
+var template = `I'm ${age} years old`;
 console.log(template);
+
 
 // 09- bonus spécial Ewa : Banjaur
 var changed = "Bonjour";
 var regex = /o/gi;
 console.log(changed.replace(regex, "a"));
+
 
 
 
