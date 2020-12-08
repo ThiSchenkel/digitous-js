@@ -23,6 +23,13 @@ var basicUp = "This is Cool";
 var basicDown = "This is Cool";
 console.log(basic, basicUp.toUpperCase(), basicDown.toLowerCase());
 
+// 06- Correction
+var basic = "This is Cool";
+var basicUp = basic.toUpperCase();
+var basicDown = basic.toLowerCase();
+console.log(basic, basicUp.toUpperCase(), basicDown.toLowerCase());
+
+
 // 07- [ 'b', 'a', 'n', 'a', 'n', 'a' ]
 var word = "banana";
 var letters = word.split("");
@@ -39,6 +46,15 @@ console.log(template);
 var changed = "Bonjour";
 var regex = /o/gi;
 console.log(changed.replace(regex, "a"));
+
+
+// 09 correction
+var bonjour = "Bonjour";
+console.log(bonjour.replace(/o/g, "a"));
+
+// bonus oublié
+var quoteOfTheDay = `La citation d\ 'aujourd\hui est : \"Le js"`;
+console.log(quoteOfTheDay)
 
 
 
