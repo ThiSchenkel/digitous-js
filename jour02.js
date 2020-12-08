@@ -69,6 +69,45 @@ if (random == 6) {
     console.log("So close...");
 }
 
+// Bonus 2
+var month = "January";
+switch (month) {
+    case ("December"):
+    case ("January"):
+    case ("February"):
+        {
+            console.log("Winter");
+            break;
+        }
+    case ("March"):
+    case ("April"):
+    case ("May"):
+        {
+            console.log("Spring");
+            break;
+        }
+    case ("June"):
+    case ("July"):
+    case ("August"):
+        {
+            console.log("Summer");
+            break;
+        }
+    case ("September"):
+    case ("October"):
+    case ("November"): {
+        console.log("Fall");
+        break;
+    }
+    default: {
+        console.log("What is this month?");
+        break;
+    }
+}
+
+
+// Bonus 3
+
 
 
 
