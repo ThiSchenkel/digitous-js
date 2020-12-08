@@ -49,18 +49,31 @@ if (password.length > 5) {
     console.log("The password is secure");
 }
 
-// 08 - Condition
-var password = "azerty";
-var passwordSecure = password.length
-if (password.length > 5) {
-    console.log("The password is secure")
-} else if (password = password.length) {
+// 08 - Condition 3
+if (score >= limit && password.length > 5) {
     console.log("Everything is good");
-} else if (password < password.length) {
+} else if (score >= limit || password.length > 5) {
     console.log("Something is good");
 } else {
     console.log("Nothing is good");
 }
+
+
+// Bonus 1
+var random = Math.floor(Math.random() * (10 - 6 + 1) + 1);
+console.log(random);
+
+if (random == 6) {
+    console.log("Yes I win !");
+} else {
+    console.log("So close...");
+}
+
+
+
+
+
+
 
 
 
