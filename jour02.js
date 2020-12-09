@@ -28,10 +28,9 @@ var test = 143;
 var bis = 219;
 console.log(test > bis); // false
 console.log(test < bis); // true
-console.log(test = bis); // 219
-console.log(test == bis); // true
-console.log(test === bis); // true
-console.log(test >= bis); // true
+console.log(test == bis); // false
+console.log(test === bis); // false
+console.log(test >= bis); // false
 console.log(test <= bis); // true
 
 // 06 - Condition
@@ -60,7 +59,7 @@ if (score >= limit && password.length > 5) {
 
 
 // Bonus 1
-var random = Math.floor(Math.random() * (10 - 6 + 1) + 1);
+var random = Math.floor(Math.random() * (6 - + 1) + 1);
 console.log(random);
 
 if (random == 6) {
@@ -107,6 +106,7 @@ switch (month) {
 
 
 // Bonus 3
+var rounedNumber = 3.6;
 
 
 
