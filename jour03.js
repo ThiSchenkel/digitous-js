@@ -15,10 +15,10 @@ console.log("objects:", objects, objects.unshift("chair"), objects.pop("lamp"), 
 var number = [1, 10, 8, 12, 6];
 console.log(number.reverse(), number.sort((a, b) => a - b));
 
-// 05 - Boucle
+// 05 - Boucle (chkreunieunieu!!!)
 var total = 0;
 var limit = 10;
-for (var i = 10; i < total; i++) {
+for (var i = 1; i <= limit; total = i++) {
     console.log(total);
 }
 
@@ -28,7 +28,5 @@ var reverseString = "";
 for (var i = sentence.length - 1; i >= 0; i--) {
     console.log(reverseString = reverseString + sentence[i]);
 }
-
-
 
 
