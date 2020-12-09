@@ -6,14 +6,14 @@ console.log(integer, float);
 // 02 - Convert
 var basic = 34;
 stringifield = basic.toString();
-console.log(stringifield);
+console.log(stringifield.length);
 
 // 03 - Round => 2
 var num = 1.5;
-var rounded = Math.round(1.5);
+var rounded = Math.round(num);
 console.log(rounded);
 
-// 04 - Arithmétique => 
+// 04 - Arithmétique 
 var test = 12;
 var bis = 5;
 console.log(test + bis); // 17
@@ -26,12 +26,9 @@ console.log(test % bis); // 2
 // 05 - Comparaison
 var test = 143;
 var bis = 219;
-console.log(test > bis); // false
-console.log(test < bis); // true
-console.log(test == bis); // false
-console.log(test === bis); // false
-console.log(test >= bis); // false
-console.log(test <= bis); // true
+console.log(test > bis, test < bis, test == bis, test === bis, test >= bis, test <= bis, test != bis, test !== bis);
+
+
 
 // 06 - Condition
 var limit = 50;
@@ -59,7 +56,9 @@ if (score >= limit && password.length > 5) {
 
 
 // Bonus 1
-var random = Math.floor(Math.random() * (6 - + 1) + 1);
+var max = 6;
+var min = 1;
+var random = Math.floor(Math.random() * (max - min + 1) + min);
 console.log(random);
 
 if (random == 6) {
@@ -68,33 +67,34 @@ if (random == 6) {
     console.log("So close...");
 }
 
+
 // Bonus 2
 var month = "January";
 switch (month) {
-    case ("December"):
-    case ("January"):
-    case ("February"):
+    case "December":
+    case "January":
+    case "February":
         {
             console.log("Winter");
             break;
         }
-    case ("March"):
-    case ("April"):
-    case ("May"):
+    case "March":
+    case "April":
+    case "May":
         {
             console.log("Spring");
             break;
         }
-    case ("June"):
-    case ("July"):
-    case ("August"):
+    case "June":
+    case "July":
+    case "August":
         {
             console.log("Summer");
             break;
         }
-    case ("September"):
-    case ("October"):
-    case ("November"): {
+    case "September":
+    case "October":
+    case "November": {
         console.log("Fall");
         break;
     }
@@ -103,17 +103,6 @@ switch (month) {
         break;
     }
 }
-
-
-// Bonus 3
-var rounedNumber = 3.6;
-
-
-
-
-
-
-
 
 
 
