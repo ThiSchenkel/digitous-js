@@ -2,7 +2,7 @@
 var i = 50;
 var x = 200;
 while (i <= x) {
-    console.log(i);
+    console.log("Nombres pairs de 50 à 200 :", i);
     i = i + 2;
 }
 
