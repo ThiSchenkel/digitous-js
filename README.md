@@ -1,2 +1,2 @@
 # digitous-js
-Some exercices on "for" and "while"
+Some exercices with "for" and "while"
