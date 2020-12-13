@@ -1,10 +1,10 @@
 // 01 - Comptons - A l'aide d'une boucle while, affichez les nombres paires entre 50 et 200
-// var i = 50;
-// var x = 200;
-// while (i <= x) {
-//     console.log(i);
-//     i = i + 2;
-// }
+var i = 50;
+var x = 200;
+while (i <= x) {
+    console.log(i);
+    i = i + 2;
+}
 
 // 02 - Try again - Créez une variable `dice` valant null et une variable `count` valant 0
 // Tant que `dice` ne vaut pas 6, assignez le résultat d'un lancé de dé aléatoire à dice et ajoutez 1 à `count`
@@ -19,4 +19,31 @@ while (dice !== 6) {
     }
 }
 console.log("Nombre de lancés de dé", count);
+
+
+// 03 - Course
+// Créez deux variables `ussainBolt` et `tysonGay` valant 0
+// Tant que l'une des deux variables n'a pas dépassé 100 
+// Tirer deux nombres aléatoires entre 1 et 10 et ajouter le premier nombre à la premiere variable et le deuxieme à la deuxieme
+// Afficher le vainqueur de la course (la variable ayant dépassé 100 en premier)
+var ussainBolt = 0;
+var tysonGay = 0;
+do {
+    var uRandom1 = Math.floor(Math.random() * (10 - 1 + 1 + 1));
+    var tRandom2 = Math.floor(Math.random() * (10 - 1 + 1 + 1));
+    ussainBolt = ussainBolt + uRandom1;
+    tysonGay = tysonGay + tRandom2; {
+        console.log("Résultats Bolt:", ussainBolt, "Résultat  Gay ", tysonGay);
+    }
+} while (ussainBolt <= 100 || tysonGay <= 100);
+
+if (ussainBolt > tysonGay) {
+    console.log("Vainqueur ussainBolt", ussainBolt)
+}
+else if (ussainBolt < tysonGay) {
+    console.log("Vainqueur tysonGay", tysonGay);
+}
+
+
+
 
