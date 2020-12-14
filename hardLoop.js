@@ -10,7 +10,7 @@ for (var i = 0; i < 50; i++) {
 }
 console.table(["Ajout 50 éléments aléatoire entre 0 et 100", numbers]);
 
-for (i = 0; i = randomNumbers; i++) {
+for (i = 0; i = randomNumbers1; i++) {
     var total = 0;
     total = total + randomNumbers;
     console.log(total);

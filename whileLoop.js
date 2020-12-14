@@ -6,15 +6,16 @@ while (i <= x) {
     i = i + 2;
 }
 
-// correction 
-var i = 50;
-while (i < 200) {
-    i++;
-    if (i % 2 === 0) {
-        console.log(i);
-    }
-    i++
-}
+// correction équivalante du 01
+// var i = 50;
+// while (i < 200) {
+//     i++;
+//     if (i % 2 === 0) {
+//         console.log(i);
+//     }
+//     i++
+// }
+
 
 // 02 - Try again - Créez une variable `dice` valant null et une variable `count` valant 0
 // Tant que `dice` ne vaut pas 6, assignez le résultat d'un lancé de dé aléatoire à dice et ajoutez 1 à `count`
@@ -53,6 +54,18 @@ if (ussainBolt > tysonGay) {
 else if (ussainBolt < tysonGay) {
     console.log("Vainqueur tysonGay", tysonGay);
 }
+
+
+// correction
+while(ussainBolt <100 || tysonGay < 100){
+    var uRandom1 = Math.floor(Math.random() * (10 - 1 + 1 + 1));
+    var tRandom2 = Math.floor(Math.random() * (10 - 1 + 1 + 1));
+    ussainBolt += uRandom1;
+    tysonGay += tRandom2;
+}
+console.log(ussainBolt);
+console.log(tysonGay);
+
 
 
 
