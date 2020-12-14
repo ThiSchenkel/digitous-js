@@ -6,6 +6,16 @@ while (i <= x) {
     i = i + 2;
 }
 
+// correction 
+var i = 50;
+while (i < 200) {
+    i++;
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+    i++
+}
+
 // 02 - Try again - Créez une variable `dice` valant null et une variable `count` valant 0
 // Tant que `dice` ne vaut pas 6, assignez le résultat d'un lancé de dé aléatoire à dice et ajoutez 1 à `count`
 // Affichez `count`, le nombre de fois qu'il vous a fallu lancer le dé pour faire un 6

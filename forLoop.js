@@ -3,7 +3,7 @@
 // Rappel: le carré d'un nombre est sa valeur, multipliée par lui même. exemple: 5x5 = 25 => Resultat attendu: 355
 var somme = 0;
 for (i = 5; i <= 10; i++) {
-    var square = i * i;
+    var square = i * i; // somme += i*i
     somme = somme + square;
 }
 console.log("Somme des carrés :", somme);
@@ -14,7 +14,7 @@ console.log("Somme des carrés :", somme);
 var totalMultiple7 = 0;
 for (i = 100; i != 1000; i++) {
     if (i % 7 === 0) {
-        totalMultiple7 = totalMultiple7 + 1
+        totalMultiple7 = totalMultiple7 + 1 // totalMultiple7++
     }
 }
 console.log("Nombre de multiples de 7 : ", totalMultiple7);
@@ -25,11 +25,12 @@ var min = 1;
 var max = 6;
 var somme = 0;
 
-for (var i = 1; i <= 20; i++) {
+for (var i = 1; i <= 20; i++) // (i =0; i<20; i++) 
+{
     var random = Math.floor(Math.random() * (max - min + 1) + min); {
         console.log("Tirage de dés ", i, " fois: ", random); {
             if (random >= 5) {
-                somme = somme + random;
+                somme = somme + random; // somme +=random
             }
         }
     }
