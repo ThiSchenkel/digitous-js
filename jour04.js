@@ -19,18 +19,18 @@
 // - Créez une variable `cats` qui contient un tableau contenant les variables `cat` et `cat2`
 // - Affichez la valeur de `age` de `cat` dans la console
 // - Affichez la valeur de `isCute` de `cat2` dans la console
-function LauchCat2(age, cat) {
-    var cat = {
-        name: "Garfield",
-        age: 3,
-        isCute: true,
-    }
-    console.log(cat);
-    if (IsCute = true) {
-        console.log("So Cute!");
-        return cat;
-    }
+var cat2 = {
+    name: "Taki",
+    age: 10,
+    isCute: false,
 }
-var cat2 = LauchCat2(10, "Taki");
-console.log(cat2);
 
+var cats = {
+    name: "Garfield",
+    age: 3,
+    isCute: true,
+    name: "Taki",
+    age: 10,
+    isCute: false,
+}
+console.log(cats.age, cat2.isCute);
