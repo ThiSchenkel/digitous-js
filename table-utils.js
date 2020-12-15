@@ -1,7 +1,7 @@
 function multiply(num) {
     var table = 0;
     for (i = 1; i <= 10; i++) {
-        table = (i + "x" + num + " = " + num * i);
+        table = (i + num) + (num * i);
         console.log(i + "x" + num + " = " + num * i);
     }
     return table;

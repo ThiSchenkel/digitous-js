@@ -45,7 +45,7 @@ console.log(calculate(process.argv[2], process.argv[3], process.argv[4]));
 function multiply(num) {
     var table = 0;
     for (i = 1; i <= 10; i++) {
-        table = (i + "x" + num + " = " + num * i);
+        table = (i + num) + (num * i);
         console.log(i + "x" + num + " = " + num * i);
     }
     return table;
