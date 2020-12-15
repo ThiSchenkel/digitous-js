@@ -7,10 +7,10 @@ var cat = {
     name: "Garfield",
     age: 3,
     isCute: true,
-}
+};
 console.log(cat);
 console.log(cat.age);
-if (IsCute = true) {
+if (cat.IsCute) {
     console.log("So Cute!");
 }
 
@@ -24,18 +24,11 @@ var cat2 = {
     name: "Taki",
     age: 10,
     isCute: false,
-}
+};
+console.log(cat2);
 
-var cats = {
-    name: "Garfield",
-    age: 3,
-    isCute: true,
-    name: "Taki",
-    age: 10,
-    isCute: false,
-}
-console.log(cats.age);
-console.log(cat2.isCute);
+var cats = [cat, cat2];
+console.log(cats.age, cats[0].age);  // =  console.log(cat2.isCute, cat[1].isCute);
 
 
 //  03 - Even
@@ -46,11 +39,9 @@ function checkIfEven(num) {
     if (num % 2 == 0) {
         num = num++, "Even";
         console.log("Even", num);
-        return num;
     }
     else {
         console.log("Odd", num);
-        return num;
     }
 }
 checkIfEven(16);
@@ -66,18 +57,18 @@ checkIfEven(16);
 // - Appelez votre fonction plusieurs fois avec des chiffres différents pour vérifier les résultats
 function compare(num1, num2) {
     if (num1 > num2) {
-        console.log("Num1 is bigger");
+        console.log(`${num1} is bigger`);
         return num1;
     } else if
         (num2 > num1) {
-        console.log("Num2 is bigger");
+        console.log(`${num2} is bigger`);
         return num2;
     } else if
         (num1 === num2) {
         console.log("Both are the same");
     }
 }
-compare(7, 7);
+compare(8, 7);
 
 
 
@@ -88,7 +79,7 @@ compare(7, 7);
 var total = 0;
 function addUp(num) {
     for (var i = 1; i <= num; i++) {
-        total = total + i;
+        total = total + i; // = total +=i;
         console.log(total);
     }
 }
@@ -100,13 +91,13 @@ addUp(12);
 // - Créez une fonction `format` qui reçoit un paramètre `num` qui représente des secondes
 // - Faites en sorte que la fonction retourne un format `heures : minutes : secondes`
 // - Appelez votre fonction avec l'argument `3700` et vérifiez que vous obtenez `1:1:40`
-// function format(num) {
-//     var secondes = num;
-//     var temps = new Date();
-//     temps.setTime(secondes * 1000);
-//     console.log("Il est :", (temps.getHours() - 1) + ":" + temps.getMinutes() + ":" + temps.getSeconds());
-// }
-// format(3700);
+function format(num) {
+    var secondes = num;
+    var temps = new Date();
+    temps.setTime(secondes * 1000);
+    console.log("Il est :", (temps.getHours() - 1) + ":" + temps.getMinutes() + ":" + temps.getSeconds());
+}
+format(3700);
 
 function format(num) {
     var time = 0;
@@ -126,6 +117,16 @@ function format(num) {
         console.log("Il est :", time);
     }
     return time;
+}
+format(3700);
+
+// Correction exo6
+function format(num) {
+    var heure = Math.floor(num / 3600);
+    var rest = num % 3600;
+    var minutes = Math.floor(rest / 60);
+    var secondes = rest % 60;
+    console.log(`${heure}: ${minutes}: ${secondes}`);
 }
 format(3700);
 
