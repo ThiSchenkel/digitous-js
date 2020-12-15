@@ -100,13 +100,44 @@ addUp(12);
 // - Créez une fonction `format` qui reçoit un paramètre `num` qui représente des secondes
 // - Faites en sorte que la fonction retourne un format `heures : minutes : secondes`
 // - Appelez votre fonction avec l'argument `3700` et vérifiez que vous obtenez `1:1:40`
+// function format(num) {
+//     var secondes = num;
+//     var temps = new Date();
+//     temps.setTime(secondes * 1000);
+//     console.log("Il est :", (temps.getHours() - 1) + ":" + temps.getMinutes() + ":" + temps.getSeconds());
+// }
+// format(3700);
+
 function format(num) {
-    var secondes = num;
-    var temps = new Date();
-    temps.setTime(secondes * 1000);
-    console.log("Il est :", (temps.getHours() - 1) + ":" + temps.getMinutes() + ":" + temps.getSeconds());
+    var time = 0;
+    var nbHours = Math.floor(num / 3600);
+    num = num - (nbHours * 3600);
+    var nbMinutes = Math.floor(num / 60);
+    num = num - (nbMinutes * 60);
+    var nbSeconds = num;
+    if (nbHours > 0)
+        time = time + nbHours + ":";
+
+    if (nbMinutes > 0)
+        time = time + nbMinutes + ":";
+
+    if (nbSeconds > 0)
+        time = time + nbSeconds; {
+        console.log("Il est :", time);
+    }
+    return time;
 }
 format(3700);
+
+
+// ⭐ Bonus
+// - Créez une fonction `generatePassword` qui reçoit un paramètre `num`
+// - La fonction génère un mot de passe aléatoire, avec autant de lettres que la valeur de `num`
+// - Le mot de passe contiendra uniquement des lettres majuscules
+// - Si `num` est plus petit que 6 et plus grand que 15, la fonction retourne "error"
+
+
+
 
 
 
