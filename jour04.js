@@ -97,7 +97,7 @@ function format(num) {
     temps.setTime(secondes * 1000);
     console.log("Il est :", (temps.getHours() - 1) + ":" + temps.getMinutes() + ":" + temps.getSeconds());
 }
-format(3700);
+format(3700); // solution native JS
 
 function format(num) {
     var time = 0;
@@ -129,13 +129,6 @@ function format(num) {
     console.log(`${heure}: ${minutes}: ${secondes}`);
 }
 format(3700);
-
-
-// ⭐ Bonus
-// - Créez une fonction `generatePassword` qui reçoit un paramètre `num`
-// - La fonction génère un mot de passe aléatoire, avec autant de lettres que la valeur de `num`
-// - Le mot de passe contiendra uniquement des lettres majuscules
-// - Si `num` est plus petit que 6 et plus grand que 15, la fonction retourne "error"
 
 
 
