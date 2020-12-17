@@ -6,34 +6,50 @@ function sortLetters(sortLettersString) {
     var sortLettersString = (sortLettersString);
     var sortLettersSplit = sortLettersString.split("");
     var sortLettersSort = sortLettersSplit.sort(); {
-        console.log(sortLettersSort.toString());
+        console.log(sortLettersSort.join(""));
     }
 }
 sortLetters("konexio");
+
+
 
 // 02 - XOXO
 // - Créez une fonction `countEach` qui reçoit une string contenant des x et des o en paramètre
 // - La fonction retourne true si il y a autant de x que de o, sinon elle retourne false
 // - Vérifiez que l'argument "xxxoooox" déclenche un true, et que "xox" déclenche un false
 function countEach(x, o) {
-    var x = "xxx";
-    var o = "ooooo";
-    console.log(o.length, x.length);
+    var x = "xxxxx";
+    var o = "oooooooo";
     var numberO = o.length;
     var numberX = x.length;
+    console.log(o.length, x.length);
 
     if (numberX > numberO) {
-        console.log("False");
+        console.log("False1");
+    }
+    else if (numberX < numberO) {
+        console.log("False2")
     }
     else if
-        (numberO > numberX); {
-        console.log("False");
-    }
-    else
-    (numberO === numberX); {
+        (numberO === numberX) {
         console.log("True");
-    }
-    return numberO, numberX;
+    } console.log(x, o)
 }
-
 countEach();
+
+
+//03 - Palindrome
+// - Créez une fonction `checkPal` qui reçoit une string en paramètre
+// - La fonction retourne "Palindrome !" si le mot se lit dans les deux sens, sinon elle retourne "Nope"
+// - Vérifiez que vous obtenez un positif avec l'argument "racecar" mais pas avec "laptop"
+function checkPal(string) {
+    if (string.split("").reverse("").join("") === string) {
+        console.log("It's OK!")
+    } else {
+        console.log("Nope");
+    }
+}
+checkPal("racecar");
+
+
+
