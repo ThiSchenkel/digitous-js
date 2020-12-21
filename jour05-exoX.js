@@ -1,4 +1,4 @@
-// var { addition, multiply } = require("./table-utils.js");
+var { addition, multiply } = require("./table-utils.js");
 
 
 // 01 - Calculator
@@ -7,35 +7,35 @@
 // - Affichez le résultat dans la console (vérifiez que pour les arguments `5`, `*` et `4` vous obtenez bien `20`)
 // - Vous devrez donner les arguments dans le terminal en appelant le programme alors attention aux paramètres !
 //     ⇒ Si vous ne donnez pas trois arguments, le programme doit afficher "error" dans la console
-// function calculate(num1, operator, num2) {
-//     var number1 = parseInt(num1);
-//     var number2 = parseInt(num2);
-//     if (operator === "+") {
-//         console.log("Vous avez fait une addition");
-//         return number1 + number2;
-//     }
-//     if (operator === "-") {
-//         console.log("Vous avez fait une soustraction");
-//         return number1 - number2;
-//     }
-//     if (operator === "x") {
-//         console.log("Vous avez fait une muntiplication");
-//         return number1 * number2;
-//     }
-//     if (operator === "/") {
-//         console.log("Vous avez fait une division");
-//         return number1 / number2;
-//     }
-//     if (operator === "%") {
-//         console.log("Vous avez fait un pourcentage");
-//         return number1 % number2;
-//     }
-// }
-// if (process.argv.length !== 5) {
-//     console.log("Error :I'm expecting 3 parameters");
-// } else {
-//     console.log(calculate(process.argv[2], process.argv[3], process.argv[4]));
-// }
+function calculate(num1, operator, num2) {
+    var number1 = parseInt(num1);
+    var number2 = parseInt(num2);
+    if (operator === "+") {
+        console.log("Vous avez fait une addition");
+        return number1 + number2;
+    }
+    if (operator === "-") {
+        console.log("Vous avez fait une soustraction");
+        return number1 - number2;
+    }
+    if (operator === "x") {
+        console.log("Vous avez fait une muntiplication");
+        return number1 * number2;
+    }
+    if (operator === "/") {
+        console.log("Vous avez fait une division");
+        return number1 / number2;
+    }
+    if (operator === "%") {
+        console.log("Vous avez fait un pourcentage");
+        return number1 % number2;
+    }
+}
+if (process.argv.length !== 5) {
+    console.log("Error :I'm expecting 3 parameters");
+} else {
+    console.log(calculate(process.argv[2], process.argv[3], process.argv[4]));
+}
 // on peut mettre le parseInt avant le process = console.log(calculate(parseInt(process.argv[2]), parseInt(process.argv[3]), parseInt(process.argv[4])));
 
 
