@@ -57,7 +57,7 @@ else if (ussainBolt < tysonGay) {
 
 
 // correction
-while(ussainBolt <100 || tysonGay < 100){
+while (ussainBolt < 100 || tysonGay < 100) {
     var uRandom1 = Math.floor(Math.random() * (10 - 1 + 1 + 1));
     var tRandom2 = Math.floor(Math.random() * (10 - 1 + 1 + 1));
     ussainBolt += uRandom1;
@@ -65,6 +65,13 @@ while(ussainBolt <100 || tysonGay < 100){
 }
 console.log(ussainBolt);
 console.log(tysonGay);
+if (ussainBolt > tysonGay) {
+    console.log("Le vainqueur est UssainBolt");
+} else if (tysonGay > ussainBolt) {
+    console.log("Le vainqueur est tysonGay");
+} else {
+    console.log("Egalité");
+}
 
 
 
