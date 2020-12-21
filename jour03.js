@@ -38,29 +38,71 @@ for (var i = 0; i <= limit; i++) {
     console.log(total);
 }
 
+
 // 06 - Reverse
 var sentence = "Hello Konexio !";
 var reverseString = "";
+// console.log("Length", sentence.length);
 for (var i = sentence.length - 1; i >= 0; i--) {
-    console.log(reverseString = reverseString + sentence[i]);
+    // console.log(sentence.charAt(i));
+    reverseString = reverseString + sentence.charAt(i);
 }
+console.log(reverseString);
+
+
+//⭐ Bonus
+// - Créez une boucle qui part de 0 et s'arrête à 100
+// - À chaque itération :
+//     - Si `i` est un multiple de 3 ⇒ affichez "fizz"
+//     - Si `i` est un multiple de 5 ⇒ affichez "buzz"
+//     - Si `i` est un multiple de 3 et 5 ⇒ affichez "fizzbuzz"
+//     - Si `i` est un multilple de 7 ⇒ ne l'affichez pas
+//     - Sinon, affichez la valeur de i
+for (i = 0; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else if (i % 7 === 0) {
+        console.log();
+    } else {
+        console.log(i);
+    }
+}
+
 
 // Bonus II
-total = 0;
-limit = 10;
-i = 0;
-while (i <= limit) {
-    total = total + i;
-    i++;
+var total = 0; // exo5
+var limit = 10;
+for (var i = 0; i <= limit; i++) {
+    total += i;
 }
-console.log(total);
+console.log("Exo5", total);
+
+var total = 0;
+var limit = 0;
+while (i < 10) {
+    i++;
+    total += i;
+}
+console.log("Bonus II ", total);
+
 
 // Bonus III
+// - Créez un tableau avec le nom de chacun de vos camarades de promo
+// - Affichez aléatoirement le nom de la personne tiré au sort
 var promo = ["a", "b", "c", "d"];
 var min = 0;
 var max = promo.length - 1;
 var random = Math.floor(Math.random() * (max - min + 1));
-console.log(promo[random]);
+console.log("numéro tiré", promo[random]);
+
+while (random === 2) {
+    random = Math.floor(Math.random() * (max - min + 1));
+} // "tant que je tombe sur 2, le dé se relance"
+
 
 // Bonus IV
 var arr = [];

@@ -65,7 +65,18 @@ function swap(string) {
         array.push(firstLetterReplace)
     });
     console.log(array.join(" "))
+}
+swap('Hello Word');
+
+
+// Bonus 1
+// - Créez une fonction `makeItSpongeBob` qui reçoit une string en paramètre
+// - La fonction retourne une string avec le même texte en alternant majuscule / minuscule
+// - Appelez votre fonction avec l'argument "Javascript is easy" et vérifiez le résultat
+function makeItSpongeBob(string) {
+    var words = string.toUpperCase().split(" ");
+    console.log(words);
+
 
 }
-
-swap('Hello Word');
+makeItSpongeBob("Javascript is easy");
