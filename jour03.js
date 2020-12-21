@@ -105,6 +105,10 @@ while (random === 2) {
 
 
 // Bonus IV
+// - Creez un tableau vide
+// - Avec une boucle for, ajoutez 20 entiers aléatoires entre 0 et 100
+// - Affichez ce tableau
+// - Avec une deuxième boucle for, trouvez l'entier le plus grand de votre tableau (pas le droit d'utiliser Math.max)
 var arr = [];
 var min = 0;
 var max = 100;
