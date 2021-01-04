@@ -13,7 +13,6 @@ fs.readFile("./jour07.txt", function (error, data) {
 // - Créez une variable `array` contenant un tableau qui contiendra les valeurs `1`, `2`, `3`, `4` et `5`
 // - Créez une variable `double` qui appellera la méthode `.map()` pour contenir les doubles des valeurs de `array`
 // - Affichez les valeurs de `double` dans la console
-
 var array = [`1`, `2`, `3`, `4`, `5`];
 var double = array.map(function (num) {
     return num * 2;
@@ -25,7 +24,6 @@ console.log(double);
 // - Créez une variable `longNames` 
 // - Créez une variable `shortNames` qui appellera la méthode `.map()` pour contenir une version compacte de `longNames` :
 // Affichez les valeurs de shortNames dans la console
-
 var longNames = [
     {
         firstName: "Jane",
@@ -49,12 +47,25 @@ console.log(shortNames);
 // - Créez une variable `array` contenant un tableau qui contiendra les valeurs `1`, `"toto"`, `34`, `"javascript"` et `8`
 // - Créez une variable `numbers` qui appellera la méthode `.filter()` pour contenir les **nombres** de `array`
 // - Affichez les valeurs de `numbers` dans la console
-
 var array = [1, "toto", 34, "javascript", 8];
 var number = array.filter(function (number) {
     return number >= 0;
 });
 console.log(number);
+
+
+//05 - Filter Even
+// - Créez une variable `numbers` contenant un tableau qui contiendra les valeurs `1`, `2`, `3`, `4`, `5`, `6`, `7` et `8`
+// - Créez une variable `even` qui appellera la méthode `.filter()` pour contenir les nombres **pairs** de `numbers`
+// - Affichez les valeurs de `even` dans la console
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+var even = numbers.filter(function (element) {
+    return (element % 2 == 0);
+});
+console.log(even);
+
+
+
 
 
 
