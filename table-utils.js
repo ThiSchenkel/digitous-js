@@ -1,23 +1,17 @@
 function multiply(num) {
-    var table = 0;
-    for (i = 1; i <= 10; i++) {
-        table = (i + num) + (num * i);
-        console.log(i + "x" + num + " = " + num * i);
+    for (var i = 1; i <= 10; i++) {
+        console.log(`${i} x ${num} = ${num * i}`);
     }
-    return table;
 }
-multiply(5);
+multiply(parseInt(process.argv[2]));
 
 
 function addition(num) {
-    var somme = 0;
-    for (i = 1; i <= 10; i++) {
-        somme = i + num;
-        console.log(i + "+" + num + " = " + somme);
+    for (var i = 1; i <= 10; i++) {
+        console.log(`${i} + ${num} = ${num + i}`);
     }
-    return somme;
 }
-addition(2);
+addition(parseInt(process.argv[2]));
 
 
 module.exports = {

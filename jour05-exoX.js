@@ -1,4 +1,6 @@
 var { addition, multiply } = require("./table-utils.js");
+var prompt = require("prompt");
+
 
 
 // 01 - Calculator
@@ -18,15 +20,15 @@ function calculate(num1, operator, num2) {
         console.log("Vous avez fait une soustraction");
         return number1 - number2;
     }
-    if (operator === "x") {
-        console.log("Vous avez fait une muntiplication");
+    else if (operator === "x") {
+        console.log("Vous avez fait une multiplication");
         return number1 * number2;
     }
-    if (operator === "/") {
+    else if (operator === "/") {
         console.log("Vous avez fait une division");
         return number1 / number2;
     }
-    if (operator === "%") {
+    else if (operator === "%") {
         console.log("Vous avez fait un pourcentage");
         return number1 % number2;
     }
@@ -34,9 +36,9 @@ function calculate(num1, operator, num2) {
 if (process.argv.length !== 5) {
     console.log("Error :I'm expecting 3 parameters");
 } else {
-    console.log(calculate(process.argv[2], process.argv[3], process.argv[4]));
-}
-// on peut mettre le parseInt avant le process = console.log(calculate(parseInt(process.argv[2]), parseInt(process.argv[3]), parseInt(process.argv[4])));
+    var result = calculate(process.argv[2], process.argv[3], process.argv[4]);
+    console.log(result);
+} // on peut mettre le parseInt avant le process = console.log(calculate(parseInt(process.argv[2]), parseInt(process.argv[3]), parseInt(process.argv[4])));
 
 
 
@@ -45,12 +47,18 @@ if (process.argv.length !== 5) {
 // - Faites en sorte que la fonction affiche la table de multiplication de ce nombre dans la console (de 1 à 10) ligne par ligne
 // - Vous devrez donner l'argument dans le terminal en appelant le programme
 //     ⇒ Si vous ne donnez pas d'argument, le programme doit afficher "error" dans la console
-function multiply(num) {
-    for (i = 1; i <= 10; i++) {
-        console.log(i + " x " + num + " = " + num * i);
-    }
+// function multiply(num) {
+//     for (var i = 1; i <= 10; i++) {
+//         console.log(`${i} x ${num} = ${num * i}`);
+//     }
+// }
+if (process.argv.length !== 4) {
+    console.log("Error");
+} else {
+    multiply(parseInt(process.argv[2]));
+    addition(parseInt(process.argv[3]));
 }
-multiply(parseInt(process.argv[2]));
+
 
 
 // 03 - Separate Table
@@ -58,7 +66,7 @@ multiply(parseInt(process.argv[2]));
 // - Mettez votre fonction `multiply` dans ce fichier, et ajouter en une deuxieme `addition` qui reprend le même principe mais avec une addition au lieu d'une multiplication
 // - Exportez les deux fonctions graces aux modules, et importez les dans votre fichier précedant pour refaire marcher votre code
 // - Affichez la table d'addition
-console.log(addition(parseInt(process.argv[2])));
+// addition(parseInt(process.argv[2]));
 
 
 
@@ -72,8 +80,32 @@ console.log(addition(parseInt(process.argv[2])));
 //     - si le joueur donne le bon nombre, on affiche "Bravo !!"
 // - Appelez la fonction
 // - Testez le jeu
+var mysteryNum = Math.floor(Math.random() * 100 + 1);
 
-
-
-
-
+console.log(mysteryNum);
+var schema = {
+    properties: {
+        number: {
+            description: "Quel est le nombre mystère?",
+            pattern: /^\d{1,3}$/,
+            required: true,
+            message: 'Entrez un nombre entre 1 et 100'
+        }
+    }
+}
+function guess() {
+    prompt.get(schema, (err, result) => {
+        var munber = parseInt(result.number);
+        if (number === mysteryNum) {
+            console.log("Bravo");
+        } else if (number > mysteryNum) {
+            console.log("C'est moin");
+            guess();
+        } else {
+            console.log("C'est plus");
+            guess();
+        }
+    })
+}
+prompt.start();
+guess();
