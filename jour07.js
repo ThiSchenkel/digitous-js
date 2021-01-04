@@ -34,13 +34,9 @@ var longNames = [
         lastName: "Smith"
     }
 ]
-
-var shortNames = longNames.map(function (element) {
-    var name = element.firstName + element.lastName;
-    return name;
-});
-
+var shortNames = longNames.map(element => (`${element.firstName} ${element.lastName}`))
 console.log(shortNames);
+
 
 
 // 04 - Filter Numbers
