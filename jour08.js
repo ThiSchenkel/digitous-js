@@ -5,26 +5,13 @@
 // - Afficher les noms des pays récupérés dans la console, séparés par un tiret
 var request = require("request");
 
-
-// request.get("https://restcountries.eu/rest/v1/all", function (error, response, body) {
-//     var name = JSON.parse(body);
-//     console.log(name);
-// });
-
-function getCountries(allNames) {
+var countriesNames = [];
+function getCountries(allCountries) {
     request.get("https://restcountries.eu/rest/v1/all", function (error, response, body) {
-        var name = JSON.parse(body);
-        console.log(name);
-    })
-};
-var result = getCountries();
-console.log(result);
-
-// var countriesNames = [];
-// countriesNames = result.filter(function (countries) {
-//     return countries.name;
-// });
-// console.log(countriesNames);
-
-
-
+        var country = JSON.parse(body);
+        for (var i = 0; i < country.length; i++) {
+            countriesNames.push(country[i].name);
+        } console.log(countriesNames);
+    });
+}
+getCountries();
