@@ -13,14 +13,14 @@ fs.readFile("./jour07.txt", function (error, data) {
 // - Créez une variable `array` contenant un tableau qui contiendra les valeurs `1`, `2`, `3`, `4` et `5`
 // - Créez une variable `double` qui appellera la méthode `.map()` pour contenir les doubles des valeurs de `array`
 // - Affichez les valeurs de `double` dans la console
-var array = [`1`, `2`, `3`, `4`, `5`];
+var array = [1, 2, 3, 4, 5];
 var double = array.map(function (num) {
     return num * 2;
 });
 console.log(double);
 
 
-// 03 - Map Names - A TERMINER
+// 03 - Map Names
 // - Créez une variable `longNames` 
 // - Créez une variable `shortNames` qui appellera la méthode `.map()` pour contenir une version compacte de `longNames` :
 // Affichez les valeurs de shortNames dans la console
@@ -34,8 +34,14 @@ var longNames = [
         lastName: "Smith"
     }
 ]
-var shortNames = longNames.map(element => (`${element.firstName} ${element.lastName}`))
+var shortNames = longNames.map(function (element) {
+    return {
+        name: `${element.firstName} ${element.lastName}`
+    };
+});
 console.log(shortNames);
+// var shortNames = longNames.map(element => (`${element.firstName} ${element.lastName}`))
+// console.log(shortNames);
 
 
 
@@ -44,10 +50,11 @@ console.log(shortNames);
 // - Créez une variable `numbers` qui appellera la méthode `.filter()` pour contenir les **nombres** de `array`
 // - Affichez les valeurs de `numbers` dans la console
 var array = [1, "toto", 34, "javascript", 8];
-var number = array.filter(function (number) {
-    return number >= 0;
+var numbers = array.filter(function (number) {
+    // return typeof number === "number";  => 3 solutions typeof et isNaN ou return parseInt (number) === number;
+    return isNaN(number) === false;
 });
-console.log(number);
+console.log(numbers);
 
 
 //05 - Filter Even
@@ -56,7 +63,7 @@ console.log(number);
 // - Affichez les valeurs de `even` dans la console
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 var even = numbers.filter(function (element) {
-    return (element % 2 == 0);
+    return (element % 2 === 0);
 });
 console.log(even);
 
@@ -95,18 +102,21 @@ var cakes =
     ]
 
 var soldOut = cakes.filter(function (cake) {
-    if (cake.flavor == "chocolate") {
-        return true;
-    } else {
-        return false;
-    }
+    return cake.flavor === "chocolate";
 }).map(function (cake) {
-    if (cake.flavor == "chocolate") {
-        cake.status = "Sold out!";
-    }
+    cake.status = "Sold out!";
     return cake;
 });
 console.table(soldOut);
+
+
+// ⭐ Bonus
+// Vous connaissez le jeu du **Pendu** ? Aujourd'hui on va le coder en utilisant le module npm prompt ! Petit rappel des règles :
+// - Un mot mystère est proposé, chaque lettre est indiquée par un tiret bas `_`
+// - Le joueur a dix tentatives pour deviner le mot mystère, et pour chaque tentative il propose une lettre :
+//     - Si la lettre est dans le mot mystère, chaque lettre correspondante est affichée
+//     - Si la lettre n'est pas dans le mot, le message suivant s'affiche : "oups... plus que x chances !" (x sera remplacé par le nombre de tentatives restantes)
+// ⇒ Afficher un message en cas de victoire ou défaite
 
 
 
